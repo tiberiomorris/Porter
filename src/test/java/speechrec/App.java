@@ -1,4 +1,4 @@
-package speechrec;
+package com.speechrec;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,18 +9,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
+ * Created by Andrew Finberg 2019/11/17
  * JavaFX App
  */
 public class App extends Application {
 
-    private static Scene scene;
+    /*
+    *** Do not change this code ***
+    The methods below are used by JavaFX to launch the application
+     */
 
-    @Override
-    public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"));
-        stage.setScene(scene);
-        stage.show();
-    }
+    private static Scene scene;
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
@@ -32,7 +31,14 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(); //This calls the JavaFX inherent launch method to start the JavaFX application
+    }
+
+    @Override
+    public void start(Stage stage) throws IOException {
+        scene = new Scene(loadFXML("primary"));
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
