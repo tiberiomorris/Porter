@@ -18,6 +18,7 @@ public class PrimaryController extends ImageDetection {
     private void ringBell() throws IOException {
         DetectFace();
         switchToSecondary();
+    }
 
     /**
      * The quitProgram method should quit the program
